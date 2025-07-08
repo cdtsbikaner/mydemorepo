@@ -1,0 +1,16 @@
+---
+ - name: demo for loop test1
+   hosts: all
+   tasks:
+     - name: Installing some packages on Manage Host
+       yum:
+         name: "{{ item }}"
+         state: absent
+
+       loop:
+         - git
+         - htop
+         - dovecot
+         - postfix
+         - php
+
