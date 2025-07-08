@@ -5,7 +5,7 @@
      - name: Installing some packages on Manage Host
        yum:
          name: "{{ item }}"
-         state: absent
+         state: present
 
        loop:
          - git
